@@ -1,0 +1,136 @@
+:root {
+  color-scheme: dark;
+  font-family: "Vazirmatn", "IRANSans", "Tahoma", "Arial", sans-serif;
+  background: radial-gradient(circle at top, #192024 0%, #050607 70%);
+  color: #f5f7fa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: inherit;
+}
+
+.container {
+  width: min(960px, 90vw);
+  padding: 48px 32px 64px;
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  background-color: rgba(12, 15, 18, 0.68);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 3.25rem);
+  letter-spacing: 0.04em;
+}
+
+.hero p {
+  margin: 12px 0 0;
+  font-size: 1.1rem;
+  color: rgba(245, 247, 250, 0.75);
+}
+
+.controls {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.play-button {
+  padding: 14px 44px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #48cfc1 0%, #87f3d0 100%);
+  color: #041417;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.play-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(72, 207, 193, 0.35);
+}
+
+.play-button:focus {
+  outline: 3px solid rgba(135, 243, 208, 0.55);
+  outline-offset: 4px;
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: rgba(245, 247, 250, 0.55);
+}
+
+.verses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.verse {
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(17, 23, 29, 0.82);
+  border: 1px solid rgba(135, 243, 208, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.index {
+  position: absolute;
+  top: -14px;
+  left: 24px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(72, 207, 193, 0.15);
+  color: #87f3d0;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.arabic {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: justify;
+  letter-spacing: 0.02em;
+}
+
+.translation {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(196, 208, 215, 0.9);
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 32px 20px 48px;
+  }
+
+  .verse {
+    padding: 18px;
+  }
+}
